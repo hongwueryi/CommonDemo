@@ -51,7 +51,7 @@ char data[624] = {
 
 int _tmain(int argc, _TCHAR* argv[])
 {
-	if (FALSE == ReplaceProcess("C:\\Users\\DemonGan\\Desktop\\MyTool\\520.exe", data, 624, 432))
+	if (FALSE == ReplaceProcess("E:\\Dten\\other demo\\common\\CppTest.exe", data, 624, 432))
 	{
 		printf("Replace Process Error.\n");
 	}

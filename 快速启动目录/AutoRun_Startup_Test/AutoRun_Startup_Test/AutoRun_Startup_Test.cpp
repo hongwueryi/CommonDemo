@@ -25,6 +25,7 @@ BOOL AutoRun_Startup(char *lpszSrcFilePath, char *lpszDestFileName)
 	bRet = ::CopyFile(lpszSrcFilePath, szDestFilePath, FALSE);
 	if (FALSE == bRet)
 	{
+		int err = GetLastError();
 		return FALSE;
 	}
 
@@ -34,7 +35,7 @@ BOOL AutoRun_Startup(char *lpszSrcFilePath, char *lpszDestFileName)
 
 int _tmain(int argc, _TCHAR* argv[])
 {
-	if (FALSE == AutoRun_Startup("C:\\Users\\DemonGan\\Desktop\\520.exe", "520.exe"))
+	if (FALSE == AutoRun_Startup("E:\\Dten\\other demo\\common\\CppTest.exe", "CppTest.exe"))
 	{
 		printf("Startup Error!\n");
 	}
